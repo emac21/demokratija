@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eko Straža</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body2">
+    <div class="nav-bar">
+        <a href="index.html">🏠 Početna</a>
+    </div>
+    <div class="container2">
+        <h1>Upoznajte sta Vam nasa stranica nudi</h1>
+    </div>
+        <a href="next2.html" class="box-link2">O nama
+        </a>
+    <a href="trecastranica.html" class="box-link3">Naš problem</a>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("loaded");
+    });
+
+    
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            let target = this.href;
+
+            document.body.style.opacity = "0"; 
+            setTimeout(() => {
+                window.location.href = target; 
+            }, 600); 
+        });
+    });
+</script>

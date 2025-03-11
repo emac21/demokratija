@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('slika1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+            display: inline-block;
+            cursor: pointer;
+}
+.container:hover{
+    transform: scale(1.05);  
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+transition: all 0.5s ease-in-out;
+}
+
+
+.box-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: darkgreen;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.box-link:hover {
+    background: forestgreen;
+    transform: scale(1.1);
+}
+
+
+.white-background {
+    background: white;
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.container2 {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: -300px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.box-link2 {
+    
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
+    border-radius: 20px;
+    
+}
+
+.box-link3 {
+    
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 1225px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
+    border-radius: 20px;
+}
+.body2 {
+    background-image: url(suma.webp);
+}
+.box-link2:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.box-link3:hover {
+    transform: scale(1.05);  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); 
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #ddd;
+}
+
+
