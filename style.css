@@ -45,7 +45,12 @@ body.loaded {
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 transition: all 0.5s ease-in-out;
 }
-
+.box-container {
+    display: flex;
+    flex-direction: column; /* Na mobilnim uređajima stavlja dugmad jedno ispod drugog */
+    align-items: center;
+    gap: 20px; /* Razmak između dugmadi */
+}
 
 .box-link {
     display: inline-block;
@@ -102,8 +107,8 @@ transition: all 0.5s ease-in-out;
 
 .box-link2 {
     
-    margin-top: 20px;
-    padding: 150px 80px;
+    margin-top: 20%;
+    padding: 50x 30px;
     background: darkgreen;
     color: white;
     font-size: 20px;
@@ -117,7 +122,8 @@ transition: all 0.5s ease-in-out;
     background-size: cover;
     background-position: 1px;
     border-radius: 20px;
-    
+    max-width: 300px;
+    position: static;
 }
 
 .box-link3 {
@@ -170,15 +176,4 @@ transition: all 0.5s ease-in-out;
 .nav-bar a:hover {
     color: #ddd;
 }
-.box-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px; 
-}
-.box-link2, .box-link3 {
-    width: 80%; 
-    max-width: 300px; 
-    padding: 50px 30px; 
-    position: static; 
-    text-align: center;
-}
+
