@@ -172,5 +172,15 @@ transition: all 0.5s ease-in-out;
 .nav-bar a:hover {
     color: #ddd;
 }
-
-
+.box-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+.box-link2, .box-link3 {
+    width: 80%; 
+    max-width: 300px; 
+    padding: 50px 30px; 
+    position: static; 
+    text-align: center;
+}
