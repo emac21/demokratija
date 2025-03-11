@@ -4,7 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        background-color: lightgray; /* Test promjena boje */
+    }
+}
 
 body {
     font-family: Arial, sans-serif;
