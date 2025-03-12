@@ -1,17 +1,18 @@
 
+/* Resetovanje margina i paddinga za sve elemente */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Osnovni stilovi za body */
 body {
     font-family: Arial, sans-serif;
     background-image: url('slika1.jpg'); 
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh; /* Osiguravamo da body zauzima barem visinu ekrana */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,45 +22,59 @@ body {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 body.loaded {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Kontejner za sadržaj */
 .container {
     background: rgba(0, 0, 0, 0.6); 
-    padding: 40px;
+    padding: 20px; /* Smanjujemo padding za manje ekrane */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-            display: inline-block;
-            cursor: pointer;
+    width: 90%; /* Postavljamo širinu na 90% za manje ekrane */
+    max-width: 600px; /* Ograničavamo maksimalnu širinu za veće ekrane */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
-.container:hover{
+
+.container:hover {
     transform: scale(1.05);  
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-transition: all 0.5s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
-
+/* Stilovi za link unutar kontejnera */
 .box-link {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 10px 20px; /* Smanjujemo padding za manje ekrane */
     background: darkgreen;
     color: white;
-    font-size: 20px;
+    font-size: 16px; /* Smanjujemo font za manje ekrane */
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
 }
-
 
 .box-link:hover {
     background: forestgreen;
     transform: scale(1.1);
 }
 
+/* Media queries za responzivni dizajn */
+@media (min-width: 768px) {
+    /* Povećavamo veličine za veće ekrane */
+    .container {
+        padding: 40px; /* Vraćamo originalni padding za veće ekrane */
+    }
+
+    .box-link {
+        padding: 15px 30px; /* Vraćamo originalni padding za veće ekrane */
+        font-size: 20px; /* Vraćamo originalni font za veće ekrane */
+    }
+}
 
 .white-background {
     background: white;
