@@ -87,6 +87,7 @@ transition: all 0.5s ease-in-out;
     }
 }
 /* Osnovni stilovi za sve uređaje */
+/* Osnovni stilovi za sve uređaje */
 .container2 {
     padding: 20px;
     border-radius: 10px;
@@ -112,17 +113,16 @@ transition: all 0.5s ease-in-out;
     background-position: center;
     border-radius: 20px;
     width: 40%; /* Postavimo širinu na 40% za manje ekrane */
-    left: 10%; /* Centriramo na manjim ekranima */
     top: 50%; /* Postavljamo na sredinu ekrana */
     transform: translateY(-50%); /* Centriramo vertikalno */
 }
 
 .box-link2 {
-    left: 10%; /* Centriramo na manjim ekranima */
+    left: 5%; /* Pomjeramo lijevi box malo ulijevo */
 }
 
 .box-link3 {
-    left: 55%; /* Centriramo na manjim ekranima */
+    left: 55%; /* Pomjeramo desni box malo udesno */
     top: 50%; /* Postavljamo na sredinu ekrana */
     transform: translateY(-50%); /* Centriramo vertikalno */
 }
@@ -170,17 +170,16 @@ transition: all 0.5s ease-in-out;
         padding: 150px 80px; /* Vraćamo originalni padding za veće ekrane */
         font-size: 20px; /* Vraćamo originalni font za veće ekrane */
         width: 30%; /* Vraćamo auto širinu za veće ekrane */
-        left: auto; /* Vraćamo originalni položaj za veće ekrane */
         top: 50%; /* Postavljamo na sredinu ekrana */
         transform: translateY(-50%); /* Centriramo vertikalno */
     }
 
     .box-link2 {
-        left: 20%; /* Vraćamo originalni položaj za veće ekrane */
+        left: 15%; /* Vraćamo originalni položaj za veće ekrane */
     }
 
     .box-link3 {
-        left: 60%; /* Vraćamo originalni položaj za veće ekrane */
+        left: 65%; /* Vraćamo originalni položaj za veće ekrane */
         top: 50%; /* Postavljamo na sredinu ekrana */
         transform: translateY(-50%); /* Centriramo vertikalno */
     }
