@@ -4,12 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-        background-color: lightgray; /* Test promjena boje */
-    }
-}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -45,6 +40,7 @@ body.loaded {
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 transition: all 0.5s ease-in-out;
 }
+
 
 .box-link {
     display: inline-block;
@@ -101,34 +97,43 @@ transition: all 0.5s ease-in-out;
 
 .box-link2 {
     
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    max-width: 300px; /* Postavi maksimalnu širinu */
-    padding: 20px; /* Povećano da bude prilagodljivo */
-    background: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
     color: white;
-    text-decoration: none;
     font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
     border-radius: 20px;
-    transition: transform 0.5s ease-in-out;
+    
 }
 
 .box-link3 {
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    max-width: 300px; /* Postavi maksimalnu širinu */
-    padding: 20px; /* Povećano da bude prilagodljivo */
-    background: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
     color: white;
-    text-decoration: none;
     font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 1225px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
     border-radius: 20px;
-    transition: transform 0.5s ease-in-out;
 }
 .body2 {
     background-image: url(suma.webp);
@@ -162,4 +167,5 @@ transition: all 0.5s ease-in-out;
 .nav-bar a:hover {
     color: #ddd;
 }
+
 
