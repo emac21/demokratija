@@ -95,25 +95,36 @@ transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.container2 {
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: -300px;
-    position: relative;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-}
-
+/* Osnovni stilovi */
 .body2 {
     background-image: url(suma.webp);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+}
+
+.container2 {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -150px;
+}
+
+.box-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box-link2, .box-link3 {
-    display: inline-block;
-    margin-top: 20px;
     padding: 100px 50px;
     background: rgba(0, 0, 0, 0.6);
     color: white;
@@ -122,22 +133,18 @@ transition: all 0.5s ease-in-out;
     border-radius: 20px;
     transition: all 0.5s ease-in-out;
     text-align: center;
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-link2:hover, .box-link3:hover {
-    transform: scale(1.05);  
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Dodaj fleksibilni raspored */
-.flex-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Navigacija */
 .nav-bar {
     position: absolute;
     top: 20px;
@@ -145,7 +152,7 @@ transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.3);
     padding: 10px 20px;
     border-radius: 8px;
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
 }
 
 .nav-bar a {
@@ -160,27 +167,24 @@ transition: all 0.5s ease-in-out;
     color: #ddd;
 }
 
-/* Responsive dizajn */
+/* Stilovi za mobilne uređaje */
 @media (max-width: 768px) {
+    .container2 {
+        padding: 20px;
+        margin-top: -100px;
+    }
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
     .box-link2, .box-link3 {
         width: 90%;
-        padding: 80px 40px;
-        font-size: 18px;
+        font-size: 16px;
+        padding: 80px 30px;
     }
-
-    .container2 {
-        margin-top: -100px;
-        padding: 20px;
-    }
-
     .nav-bar {
         top: 10px;
         left: 10px;
-        padding: 8px 15px;
-    }
-
-    .nav-bar a {
-        font-size: 16px;
+        padding: 5px 10px;
     }
 }
-
