@@ -86,8 +86,9 @@ transition: all 0.5s ease-in-out;
         opacity: 1;
     }
 }
+/* Osnovni stilovi za sve uređaje */
 .container2 {
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     margin-top: -300px;
@@ -95,57 +96,46 @@ transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.box-link2 {
-    
+.box-link2, .box-link3 {
     margin-top: 20px;
-    padding: 150px 80px;
+    padding: 100px 50px; /* Smanjimo padding za manje ekrane */
     background: darkgreen;
     color: white;
-    font-size: 20px;
+    font-size: 18px; /* Smanjimo font za manje ekrane */
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
-    margin-top: 300px;
     position: absolute;
-    left: 500px;
     background: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 1px;
+    background-position: center;
     border-radius: 20px;
-    
+    width: 80%; /* Postavimo širinu na 80% za manje ekrane */
+    left: 10%; /* Centriramo na manjim ekranima */
+    margin-top: 150px; /* Smanjimo margin za manje ekrane */
+}
+
+.box-link2 {
+    left: 10%; /* Centriramo na manjim ekranima */
 }
 
 .box-link3 {
-    
-    margin-top: 20px;
-    padding: 150px 80px;
-    background: darkgreen;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
-    margin-top: 300px;
-    position: absolute;
-    left: 1225px;
-    background: rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 1px;
-    border-radius: 20px;
+    left: 10%; /* Centriramo na manjim ekranima */
+    top: 400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
 }
+
 .body2 {
     background-image: url(suma.webp);
+    background-size: cover;
+    background-position: center;
 }
-.box-link2:hover {
+
+.box-link2:hover, .box-link3:hover {
     transform: scale(1.05); 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
-.box-link3:hover {
-    transform: scale(1.05);  
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-}
+
 .nav-bar {
     position: absolute;
     top: 20px;
@@ -159,7 +149,7 @@ transition: all 0.5s ease-in-out;
 .nav-bar a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Smanjimo font za manje ekrane */
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -168,4 +158,31 @@ transition: all 0.5s ease-in-out;
     color: #ddd;
 }
 
+/* Media queries za responzivni dizajn */
+@media (min-width: 768px) {
+    .container2 {
+        padding: 40px;
+    }
+
+    .box-link2, .box-link3 {
+        padding: 150px 80px; /* Vraćamo originalni padding za veće ekrane */
+        font-size: 20px; /* Vraćamo originalni font za veće ekrane */
+        width: auto; /* Vraćamo auto širinu za veće ekrane */
+        left: auto; /* Vraćamo originalni položaj za veće ekrane */
+        margin-top: 300px; /* Vraćamo originalni margin za veće ekrane */
+    }
+
+    .box-link2 {
+        left: 500px; /* Vraćamo originalni položaj za veće ekrane */
+    }
+
+    .box-link3 {
+        left: 1225px; /* Vraćamo originalni položaj za veće ekrane */
+        top: auto; /* Vraćamo originalni položaj za veće ekrane */
+    }
+
+    .nav-bar a {
+        font-size: 18px; /* Vraćamo originalni font za veće ekrane */
+    }
+}
 
