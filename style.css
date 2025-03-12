@@ -91,9 +91,9 @@ transition: all 0.5s ease-in-out;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: -300px;
     position: relative;
     background: rgba(0, 0, 0, 0.6);
+    margin-top: 20px; /* Dodajemo margin za prostor iznad container2 */
 }
 
 .box-link2, .box-link3 {
@@ -105,15 +105,16 @@ transition: all 0.5s ease-in-out;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
-    position: absolute;
+    position: fixed; /* Koristimo fixed za fiksiranje pozicije */
     background: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    width: 80%; /* Postavimo širinu na 80% za manje ekrane */
+    width: 40%; /* Postavimo širinu na 40% za manje ekrane */
     left: 10%; /* Centriramo na manjim ekranima */
-    margin-top: 150px; /* Smanjimo margin za manje ekrane */
+    top: 50%; /* Postavljamo na sredinu ekrana */
+    transform: translateY(-50%); /* Centriramo vertikalno */
 }
 
 .box-link2 {
@@ -121,8 +122,9 @@ transition: all 0.5s ease-in-out;
 }
 
 .box-link3 {
-    left: 10%; /* Centriramo na manjim ekranima */
-    top: 400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
+    left: 55%; /* Centriramo na manjim ekranima */
+    top: 50%; /* Postavljamo na sredinu ekrana */
+    transform: translateY(-50%); /* Centriramo vertikalno */
 }
 
 .body2 {
@@ -132,12 +134,12 @@ transition: all 0.5s ease-in-out;
 }
 
 .box-link2:hover, .box-link3:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05) translateY(-50%); /* Dodajemo translateY za hover */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .nav-bar {
-    position: absolute;
+    position: fixed; /* Fiksiramo navigaciju */
     top: 20px;
     left: 20px;
     background: rgba(0, 0, 0, 0.3);
@@ -167,22 +169,23 @@ transition: all 0.5s ease-in-out;
     .box-link2, .box-link3 {
         padding: 150px 80px; /* Vraćamo originalni padding za veće ekrane */
         font-size: 20px; /* Vraćamo originalni font za veće ekrane */
-        width: auto; /* Vraćamo auto širinu za veće ekrane */
+        width: 30%; /* Vraćamo auto širinu za veće ekrane */
         left: auto; /* Vraćamo originalni položaj za veće ekrane */
-        margin-top: 300px; /* Vraćamo originalni margin za veće ekrane */
+        top: 50%; /* Postavljamo na sredinu ekrana */
+        transform: translateY(-50%); /* Centriramo vertikalno */
     }
 
     .box-link2 {
-        left: 500px; /* Vraćamo originalni položaj za veće ekrane */
+        left: 20%; /* Vraćamo originalni položaj za veće ekrane */
     }
 
     .box-link3 {
-        left: 1225px; /* Vraćamo originalni položaj za veće ekrane */
-        top: auto; /* Vraćamo originalni položaj za veće ekrane */
+        left: 60%; /* Vraćamo originalni položaj za veće ekrane */
+        top: 50%; /* Postavljamo na sredinu ekrana */
+        transform: translateY(-50%); /* Centriramo vertikalno */
     }
 
     .nav-bar a {
         font-size: 18px; /* Vraćamo originalni font za veće ekrane */
     }
 }
-
