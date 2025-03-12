@@ -93,50 +93,59 @@ transition: all 0.5s ease-in-out;
     margin-top: -300px;
     position: relative;
     background: rgba(0, 0, 0, 0.6);
-    text-align: center;
 }
 
-/* Centrirani elementi u fleksibilnom rasporedu */
-.container2-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.box-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap; /* Omogućava prelamanje na manjim ekranima */
-    margin-top: 50px;
-}
-
-.box-link2, .box-link3 {
-    padding: 100px 50px;
+.box-link2 {
+    
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
     color: white;
     font-size: 20px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 500px;
     background: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
-    width: 250px; 
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: 1px;
+    border-radius: 20px;
+    
 }
 
-.box-link2:hover, .box-link3:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+.box-link3 {
+    
+    margin-top: 20px;
+    padding: 150px 80px;
+    background: darkgreen;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 300px;
+    position: absolute;
+    left: 1225px;
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 1px;
+    border-radius: 20px;
 }
-
-/* Navigacija */
+.body2 {
+    background-image: url(suma.webp);
+}
+.box-link2:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+.box-link3:hover {
+    transform: scale(1.05);  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
 .nav-bar {
     position: absolute;
     top: 20px;
@@ -144,7 +153,7 @@ transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.3);
     padding: 10px 20px;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); 
 }
 
 .nav-bar a {
@@ -159,24 +168,4 @@ transition: all 0.5s ease-in-out;
     color: #ddd;
 }
 
-/* Pozadina */
-.body2 {
-    background-image: url(suma.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-/* Responsivnost za telefone */
-@media (max-width: 768px) {
-    .box-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .box-link2, .box-link3 {
-        width: 80%; /* Prilagođava širinu na manjim ekranima */
-        height: auto;
-        padding: 80px 40px;
-    }
-}
 
