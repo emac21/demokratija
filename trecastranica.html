@@ -235,14 +235,14 @@ img {
 <script>
     document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.querySelector(".nav-bar");
-    let lastScrollY = window.scrollY; // Pratimo posljednju poziciju skrola
+    let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > lastScrollY) {
-            // Korisnik skrola prema dolje
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            // Korisnik skrola prema dolje i prošao je 100px od vrha
             navBar.classList.add("hidden");
         } else {
-            // Korisnik skrola prema gore
+            // Korisnik skrola prema gore ili je blizu vrha
             navBar.classList.remove("hidden");
         }
         lastScrollY = window.scrollY; // Ažuriramo posljednju poziciju skrola
