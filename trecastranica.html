@@ -236,13 +236,14 @@ img {
     document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.querySelector(".nav-bar");
     let lastScrollY = window.scrollY;
+    const hideThreshold = 100; // Prag za sakrivanje navigacije (u pikselima)
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > lastScrollY && window.scrollY > 100) {
-            // Korisnik skrola prema dolje i prošao je 100px od vrha
+        if (window.scrollY > lastScrollY && window.scrollY > hideThreshold) {
+            // Korisnik skrola prema dolje i prošao je prag za sakrivanje
             navBar.classList.add("hidden");
-        } else {
-            // Korisnik skrola prema gore ili je blizu vrha
+        } else if (window.scrollY <= hideThreshold) {
+            // Korisnik je blizu vrha stranice
             navBar.classList.remove("hidden");
         }
         lastScrollY = window.scrollY; // Ažuriramo posljednju poziciju skrola
