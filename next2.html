@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Eko Straža</title>
     <style>
         /* Osnovni stilovi za sve uređaje */
@@ -10,7 +11,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fffdf7;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -141,11 +142,22 @@ body.loaded {
         font-size: 18px; /* Vraćamo originalnu veličinu fonta za veće ekrane */
     }
 }
+.nav-bar2{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); 
+    color: white;
+}
     </style>
 </head>
 <body>
+    <header class="nav-bar2">U izradi</header>
     <div class="nav-bar">
-        <a href="next.html">🏠 Početna</a>
+        <a href="next.html"><i class="fa-solid fa-house"></i> Početna</a>
     </div>
     <div class="hero">O nama</div>
     <div class="container">
@@ -172,7 +184,7 @@ body.loaded {
     <div class="container4">
         <h2>Gdje nas možete kontaktirati?</h2>
         <p>Putem naše instagram stranice, Facebook profila i gmail-a</p>
-        <a href="https://www.instagram.com/"><img src="inst.jpg" alt="" class="ig"></a>
+        <a href="https://www.instagram.com/ekostraza_/"><img src="inst.jpg" alt="" class="ig"></a>
         <a href="https://www.facebook.com/profile.php?id=61573729048926"><img src="face.jpg" alt="" class="face"></a>
         <a href=""><img src="gmail.png" class="gmail"></a>
     </div>
