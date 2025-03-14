@@ -1,12 +1,19 @@
 
-
 /* Resetovanje margina i paddinga za sve elemente */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+.nav-bar2{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); 
+}
 /* Osnovni stilovi za body */
 body {
     font-family: Arial, sans-serif;
