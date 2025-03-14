@@ -16,9 +16,9 @@
 }
 
 .container, .container2, .container3 {
-    max-width: 90%;
-    width: 100%;
-    margin: 20px auto;
+    max-width: 90%; /* Ograničavamo širinu boxova */
+    width: 100%; /* Postavljamo širinu na 100% roditeljskog elementa */
+    margin: 20px auto; /* Centriramo boxove i dodajemo razmak između njih */
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -27,7 +27,7 @@
 
 .hero {
     background: url(posjecena2.jpg) no-repeat center center/cover;
-    height: 300px;
+    height: 300px; /* Visina hero sekcije */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +61,7 @@ p {
 
 img {
     width: 100%;
-    max-width: 100%;
+    max-width: 100%; /* Slika ne prelazi širinu roditeljskog kontejnera */
     border-radius: 8px;
 }
 
@@ -94,6 +94,64 @@ img {
 .nav-bar.hidden {
     opacity: 0;
     pointer-events: none; /* Onemogućavamo interakciju kada je navigacija skrivena */
+}
+
+/* Media queries za responzivni dizajn */
+@media (max-width: 768px) {
+    .container, .container2, .container3 {
+        margin: 10px auto; /* Manje margine za manje ekrane */
+        padding: 15px; /* Manje paddinga za manje ekrane */
+    }
+
+    .hero {
+        height: 200px; /* Manja visina za manje ekrane */
+        font-size: 20px; /* Manji font za manje ekrane */
+    }
+
+    h1 {
+        font-size: 20px; /* Manji font za manje ekrane */
+    }
+
+    p {
+        font-size: 14px; /* Manji font za manje ekrane */
+    }
+
+    .nav-bar {
+        top: 5px;
+        left: 5px;
+        padding: 8px 12px; /* Manje paddinga za manje ekrane */
+    }
+
+    .nav-bar a {
+        font-size: 12px; /* Manji font za manje ekrane */
+        margin: 0 5px; /* Manje razmaka između linkova */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 150px; /* Još manja visina za vrlo male ekrane */
+        font-size: 18px; /* Još manji font za vrlo male ekrane */
+    }
+
+    h1 {
+        font-size: 18px; /* Još manji font za vrlo male ekrane */
+    }
+
+    p {
+        font-size: 12px; /* Još manji font za vrlo male ekrane */
+    }
+
+    .nav-bar {
+        top: 2px;
+        left: 2px;
+        padding: 5px 10px; /* Još manje paddinga za vrlo male ekrane */
+    }
+
+    .nav-bar a {
+        font-size: 10px; /* Još manji font za vrlo male ekrane */
+        margin: 0 3px; /* Još manje razmaka između linkova */
+    }
 }
     </style>
 </head>
@@ -190,4 +248,6 @@ img {
         lastScrollY = window.scrollY; // Ažuriramo posljednju poziciju skrola
     });
 });
+
+
 </script>
