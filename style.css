@@ -97,7 +97,6 @@ body.loaded {
     font-size: 24px;
 }
 
-
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease-in forwards;
@@ -111,6 +110,7 @@ body.loaded {
         opacity: 1;
     }
 }
+
 /* Osnovni stilovi za sve uređaje */
 .container2 {
     padding: 20px;
@@ -142,18 +142,18 @@ body.loaded {
 }
 
 .box-link2 {
-    left: 10%; /* Centriramo na manjim ekranima */
+    top: 200px; /* Dodajemo top za prvi box */
 }
 
 .box-link3 {
-    left: 10%; /* Centriramo na manjim ekranima */
-    top: 400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
+    top: 500px; /* Dodajemo top za drugi box kako bi bio ispod prvog */
 }
 
 .body2 {
     background-image: url(suma.webp);
     background-size: cover;
     background-position: center;
+    min-height: 100vh; /* Osiguravamo da body zauzima cijelu visinu ekrana */
 }
 
 .box-link2:hover, .box-link3:hover {
@@ -183,7 +183,6 @@ body.loaded {
     color: #ddd;
 }
 
-
 @media (min-width: 768px) {
     .container2 {
         padding: 40px;
@@ -199,11 +198,12 @@ body.loaded {
 
     .box-link2 {
         left: 500px; /* Vraćamo originalni položaj za veće ekrane */
+        top: 200px; /* Dodajemo top za prvi box */
     }
 
     .box-link3 {
         left: 1225px; /* Vraćamo originalni položaj za veće ekrane */
-        top: auto; /* Vraćamo originalni položaj za veće ekrane */
+        top: 200px; /* Dodajemo top za drugi box */
     }
 
     .nav-bar a {
