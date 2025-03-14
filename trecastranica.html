@@ -16,8 +16,9 @@
 }
 
 .container, .container2, .container3 {
-    max-width: 90%; /* Smanjujemo maksimalnu širinu za manje ekrane */
-    margin: 20px auto; /* Smanjujemo margine za manje ekrane */
+    max-width: 90%; /* Ograničavamo širinu boxova */
+    width: 100%; /* Postavljamo širinu na 100% roditeljskog elementa */
+    margin: 20px auto; /* Centriramo boxove i dodajemo razmak između njih */
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -26,15 +27,15 @@
 
 .hero {
     background: url(posjecena2.jpg) no-repeat center center/cover;
-    height: 300px; /* Smanjujemo visinu za manje ekrane */
+    height: 300px; /* Visina hero sekcije */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 24px; /* Smanjujemo font za manje ekrane */
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
-    padding: 0 15px; /* Dodajemo padding za manje ekrane */
+    padding: 0 15px;
 }
 
 header {
@@ -45,11 +46,11 @@ header {
 
 h1 {
     color: #2e7d32;
-    font-size: 24px; /* Smanjujemo font za manje ekrane */
+    font-size: 24px;
 }
 
 p {
-    font-size: 16px; /* Smanjujemo font za manje ekrane */
+    font-size: 16px;
     line-height: 1.6;
 }
 
@@ -60,16 +61,16 @@ p {
 
 img {
     width: 100%;
-    max-width: 100%; /* Osiguravamo da slika ne prelazi širinu kontejnera */
+    max-width: 100%; /* Slika ne prelazi širinu roditeljskog kontejnera */
     border-radius: 8px;
 }
 
 .nav-bar {
     position: fixed;
-    top: 10px; /* Smanjujemo udaljenost od vrha za manje ekrane */
-    left: 10px; /* Smanjujemo udaljenost od lijevog ruba za manje ekrane */
+    top: 10px;
+    left: 10px;
     background: rgba(0, 0, 0, 0.3);
-    padding: 10px 15px; /* Smanjujemo padding za manje ekrane */
+    padding: 10px 15px;
     border-radius: 8px;
     backdrop-filter: blur(5px);
     z-index: 1000;
@@ -78,10 +79,10 @@ img {
 .nav-bar a {
     color: white;
     text-decoration: none;
-    font-size: 14px; /* Smanjujemo font za manje ekrane */
+    font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
-    margin: 0 8px; /* Smanjujemo razmak između linkova za manje ekrane */
+    margin: 0 8px;
 }
 
 .nav-bar a:hover {
@@ -91,32 +92,32 @@ img {
 /* Media queries za responzivni dizajn */
 @media (max-width: 768px) {
     .container, .container2, .container3 {
-        margin: 10px auto; /* Još manje margine za manje ekrane */
+        margin: 10px auto; /* Manje margine za manje ekrane */
         padding: 15px; /* Manje paddinga za manje ekrane */
     }
 
     .hero {
-        height: 200px; /* Još manja visina za manje ekrane */
-        font-size: 20px; /* Još manji font za manje ekrane */
+        height: 200px; /* Manja visina za manje ekrane */
+        font-size: 20px; /* Manji font za manje ekrane */
     }
 
     h1 {
-        font-size: 20px; /* Još manji font za manje ekrane */
+        font-size: 20px; /* Manji font za manje ekrane */
     }
 
     p {
-        font-size: 14px; /* Još manji font za manje ekrane */
+        font-size: 14px; /* Manji font za manje ekrane */
     }
 
     .nav-bar {
         top: 5px;
         left: 5px;
-        padding: 8px 12px; /* Još manje paddinga za manje ekrane */
+        padding: 8px 12px; /* Manje paddinga za manje ekrane */
     }
 
     .nav-bar a {
-        font-size: 12px; /* Još manji font za manje ekrane */
-        margin: 0 5px; /* Još manje razmaka između linkova */
+        font-size: 12px; /* Manji font za manje ekrane */
+        margin: 0 5px; /* Manje razmaka između linkova */
     }
 }
 
