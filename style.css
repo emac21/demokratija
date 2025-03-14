@@ -1,5 +1,6 @@
 
 
+/* Resetovanje margina i paddinga za sve elemente */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ body {
     background-image: url('slika1.jpg'); 
     background-size: cover; /* Osigurava da slika pokriva cijeli ekran */
     background-position: center; /* Centrira sliku */
+    background-attachment: fixed; /* Osigurava da se slika ne pomiče prilikom skrolovanja */
     min-height: 100vh; /* Osigurava da body zauzima barem visinu ekrana */
     display: flex;
     justify-content: center;
@@ -51,70 +53,6 @@ body.loaded {
     margin-top: 20px;
     padding: 10px 20px; /* Smanjujemo padding za manje ekrane */
     background: darkgreen;
-    color: white;/* Resetovanje margina i paddinga za sve elemente */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Osnovni stilovi za body */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('slika1.jpg');
-    background-size: cover; /* Osigurava da slika pokriva cijeli ekran */
-    background-position: center; /* Centrira sliku */
-    background-attachment: fixed; /* Osigurava da se slika ne pomiče prilikom skrolovanja */
-    min-height: 100vh; /* Osigurava da body zauzima barem visinu ekrana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-body.loaded {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Kontejner za sadržaj */
-.container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px; /* Smanjujemo padding za manje ekrane */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    width: 90%; /* Postavljamo širinu na 90% za manje ekrane */
-    max-width: 600px; /* Ograničavamo maksimalnu širinu za veće ekrane */
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrira sadržaj horizontalno */
-    justify-content: center; /* Centrira sadržaj vertikalno */
-}
-
-.container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Stilovi za logo */
-.logo {
-    max-width: 100%; /* Osigurava da logo ne prelazi širinu kontejnera */
-    height: auto; /* Održava proporcije slike */
-    margin-bottom: 20px; /* Razmak između loga i ostalog sadržaja */
-}
-
-/* Stilovi za link unutar kontejnera */
-.box-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px; /* Smanjujemo padding za manje ekrane */
-    background: darkgreen;
     color: white;
     font-size: 16px; /* Smanjujemo font za manje ekrane */
     text-decoration: none;
@@ -137,10 +75,6 @@ body.loaded {
     .box-link {
         padding: 15px 30px; /* Vraćamo originalni padding za veće ekrane */
         font-size: 20px; /* Vraćamo originalni font za veće ekrane */
-    }
-
-    .logo {
-        max-width: 80%; /* Smanjujemo širinu loga za veće ekrane */
     }
 }
 
