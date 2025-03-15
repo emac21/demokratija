@@ -57,7 +57,7 @@ body.loaded {
 
 /* Stilovi za link unutar kontejnera */
 .box-link {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
     padding: 10px 20px; /* Smanjujemo padding za manje ekrane */
     background: darkgreen;
