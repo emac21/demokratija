@@ -57,7 +57,7 @@ body.loaded {
 
 /* Stilovi za link unutar kontejnera */
 .box-link {
-    display: block;
+    display: inline-block;
     margin-top: 20px;
     padding: 10px 20px; /* Smanjujemo padding za manje ekrane */
     background: darkgreen;
@@ -219,6 +219,17 @@ body.loaded {
         font-size: 16px; /* Manji font za mobilne uređaje */
         width: 90%; /* Šira širina za mobilne uređaje */
         left: 5%; /* Centriranje za mobilne uređaje */
-        top: 100px; /* Prilagođeni top za mobilne uređaje */
+        top: auto; /* Uklonimo top za mobilne uređaje */
+        margin-top: 20px; /* Dodajemo margin između boxova */
+        position: relative; /* Postavljamo relativnu poziciju */
+        display: block; /* Boxovi će biti jedan ispod drugog */
+    }
+
+    .box-link2 {
+        margin-top: 100px; /* Dodajemo veći margin za prvi box */
+    }
+
+    .box-link3 {
+        margin-top: 20px; /* Dodajemo margin za drugi box */
     }
 }
