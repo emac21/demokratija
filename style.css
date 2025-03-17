@@ -4,8 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.nav-bar2 {
+.nav-bar2{
     position: absolute;
     top: 60px;
     left: 20px;
@@ -14,7 +13,6 @@
     border-radius: 8px;
     backdrop-filter: blur(5px); 
 }
-
 /* Osnovni stilovi za body */
 body {
     font-family: Arial, sans-serif;
@@ -97,6 +95,7 @@ body.loaded {
     font-size: 24px;
 }
 
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease-in forwards;
@@ -110,7 +109,6 @@ body.loaded {
         opacity: 1;
     }
 }
-
 /* Osnovni stilovi za sve uređaje */
 .container2 {
     padding: 20px;
@@ -130,8 +128,7 @@ body.loaded {
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
-    position: sticky; /* Promijenjeno iz absolute u sticky */
-    top: 150px; /* Elementi će se "lijepiti" na ovu poziciju prilikom skrolanja */
+    position: absolute;
     background: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,18 +140,18 @@ body.loaded {
 }
 
 .box-link2 {
-    top: 200px; /* Dodajemo top za prvi box */
+    left: 10%; /* Centriramo na manjim ekranima */
 }
 
 .box-link3 {
-    top: 550px; /* Dodajemo top za drugi box kako bi bio ispod prvog */
+    left: 10%; /* Centriramo na manjim ekranima */
+    top: 400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
 }
 
 .body2 {
     background-image: url(suma.webp);
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Osiguravamo da body zauzima cijelu visinu ekrana */
 }
 
 .box-link2:hover, .box-link3:hover {
@@ -184,6 +181,7 @@ body.loaded {
     color: #ddd;
 }
 
+
 @media (min-width: 768px) {
     .container2 {
         padding: 40px;
@@ -195,41 +193,18 @@ body.loaded {
         width: auto; /* Vraćamo auto širinu za veće ekrane */
         left: auto; /* Vraćamo originalni položaj za veće ekrane */
         margin-top: 300px; /* Vraćamo originalni margin za veće ekrane */
-        position: absolute; /* Vraćamo absolute za veće ekrane */
     }
 
     .box-link2 {
         left: 500px; /* Vraćamo originalni položaj za veće ekrane */
-        top: 200px; /* Dodajemo top za prvi box */
     }
 
     .box-link3 {
         left: 1225px; /* Vraćamo originalni položaj za veće ekrane */
-        top: 200px; /* Dodajemo top za drugi box */
+        top: auto; /* Vraćamo originalni položaj za veće ekrane */
     }
 
     .nav-bar a {
         font-size: 18px; /* Vraćamo originalni font za veće ekrane */
-    }
-}
-
-@media (max-width: 767px) {
-    .box-link2, .box-link3 {
-        padding: 50px 20px; /* Manji padding za mobilne uređaje */
-        font-size: 16px; /* Manji font za mobilne uređaje */
-        width: 90%; /* Šira širina za mobilne uređaje */
-        left: 5%; /* Centriranje za mobilne uređaje */
-        top: auto; /* Uklonimo top za mobilne uređaje */
-        margin-top: 20px; /* Dodajemo margin između boxova */
-        position: relative; /* Postavljamo relativnu poziciju */
-        display: block; /* Boxovi će biti jedan ispod drugog */
-    }
-
-    .box-link2 {
-        margin-top: 100px; /* Dodajemo veći margin za prvi box */
-    }
-
-    .box-link3 {
-        margin-top: 20px; /* Dodajemo margin za drugi box */
     }
 }
