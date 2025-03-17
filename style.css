@@ -145,7 +145,7 @@ body.loaded {
 
 .box-link3 {
     left: 10%; /* Centriramo na manjim ekranima */
-    top: 400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
+    top: -400px; /* Pomeramo drugi box ispod prvog na manjim ekranima */
 }
 
 .body2 {
